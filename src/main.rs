@@ -87,19 +87,81 @@
 // }
 
 // Structs
-struct User {
-    active: bool,
-    username: String,
-    email: String,
-    sign_in_count: u64,
+// struct User {
+//     active: bool,
+//     username: String,
+//     email: String,
+//     sign_in_count: u64,
+// }
+
+// fn main () {
+//     let user1 = User {
+//         active: true,
+//         username: String::from("priyam"),
+//         email: String::from("priyam@gmail.com"),
+//         sign_in_count: 1,
+//     };
+//     print!("User 1 username: {:?}", user1.username);
+// }
+
+// Implementing structs
+// struct Rect {
+//     width: u32,
+//     height: u32,
+// }
+
+// impl Rect {
+//     fn area(&self) -> u32 {
+//         return self.width * self.height;
+//     }
+//     fn perimeter(&self) -> u32 {
+//         return 2* (self.width + self.height);
+//     }
+// }
+
+// fn main () {
+//     let rect = Rect {
+//         width: 30,
+//         height: 50,
+//     };
+//     println!("area: {}", rect.area());
+//     println!("perimeter: {}", rect.perimeter());
+// }
+
+// Enums
+// enum Direction {
+//     North,
+//     South,
+//     East,
+//     West,
+// }
+
+// fn main () {
+//     let my_direction = Direction::North;
+//     move_around(my_direction);
+// }
+
+// fn move_around(direction: Direction) {
+//     // implements logic to move a character around
+// }
+
+// Enums with values
+// define an enum called shape
+enum Shape {
+    Circle(f64), // Variant with associated data (radius)
+    Rectangle(f64, f64), // Variant with associated data (width, height)
+    Square(f64), // Variant with associated data (side length)
+}
+
+// Function to calculate area based on the shape
+fn calculate_area(shape: Shape) -> f64 {
+    // calculate area based of the shape
+    return 0
 }
 
 fn main () {
-    let user1 = User {
-        active: true,
-        username: String::from("priyam"),
-        email: String::from("priyam@gmail.com"),
-        sign_in_count: 1,
-    };
-    print!("User 1 username: {:?}", user1.username);
+    // Create instances of different shapes
+    let circle = Shape::Circle(5.0);
+    let rectangle = Shape::Rectangle(3.0, 4.0);
+    let square = Shape::Square(2.0);
 }
