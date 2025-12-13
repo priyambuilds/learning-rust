@@ -220,21 +220,61 @@
 
 // Option enum
 // if you ever have a functionb that should return null, then return an Option instead.
-fn find_first_a(s: String)  -> Option<usize> {
-    for (index, character) in s.chars().enumerate() {
-        if character == 'a' {
-            return Some(index);
-        }
-     }
-     return None;
+// fn find_first_a(s: String)  -> Option<usize> {
+//     for (index, character) in s.chars().enumerate() {
+//         if character == 'a' {
+//             return Some(index);
+//         }
+//      }
+//      return None;
+// }
+
+// fn main () {
+//     let my_string = String::from("raman");
+//     let res = find_first_a(my_string);
+
+//     match res {
+//         Some(index) => println!("The letter 'a' is found at index {}", index),
+//         None => println!("The letter 'a' is not found in the string"),
+//     }
+// }
+
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+// advanced
+// ////////////////////////////////////////////////////////////////////////////////////////
+// fn main () {
+//     let mut vec = Vec::new();
+//     vec.push(1);
+//     vec.push(2);
+//     vec.push(3);
+//     vec.push(4);
+//     vec.push(5);
+
+//     println!("{:?}", vec);
+// }
+
+// Write a function that takes a vector as an input and return returns a vector with even values
+fn main () {
+    let mut vec = Vec::new();
+    vec.push(1);
+    vec.push(2); 
+    vec.push(3);
+    vec.push(4);
+    vec.push(5);
+
+    let ans = even_filter(&vec);
+
+    println!("{:?}", ans);
+    println!("{:?}", vec);
 }
 
-fn main () {
-    let my_string = String::from("raman");
-    let res = find_first_a(my_string);
-
-    match res {
-        Some(index) => println!("The letter 'a' is found at index {}", index),
-        None => println!("The letter 'a' is not found in the string"),
+fn even_filter (vec: &Vec<i32>) -> Vec<i32> {
+    let mut new_vec = Vec::new();
+    for val in vec {
+        if val % 2 == 0 {
+            new_vec.push(*val);
+        }
     }
+    return new_vec;
 }
