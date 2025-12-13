@@ -217,3 +217,24 @@
 //     let res = fs:: read_to_string("example.txt");
 //     return res.unwrap();
 // }
+
+// Option enum
+// if you ever have a functionb that should return null, then return an Option instead.
+fn find_first_a(s: String)  -> Option<usize> {
+    for (index, character) in s.chars().enumerate() {
+        if character == 'a' {
+            return Some(index);
+        }
+     }
+     return None;
+}
+
+fn main () {
+    let my_string = String::from("raman");
+    let res = find_first_a(my_string);
+
+    match res {
+        Some(index) => println!("The letter 'a' is found at index {}", index),
+        None => println!("The letter 'a' is not found in the string"),
+    }
+}
