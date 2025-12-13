@@ -147,21 +147,73 @@
 
 // Enums with values
 // define an enum called shape
-enum Shape {
-    Circle(f64), // Variant with associated data (radius)
-    Rectangle(f64, f64), // Variant with associated data (width, height)
-    Square(f64), // Variant with associated data (side length)
-}
+// enum Shape {
+//     Circle(f64), // Variant with associated data (radius)
+//     Rectangle(f64, f64), // Variant with associated data (width, height)
+//     Square(f64), // Variant with associated data (side length)
+// }
 
-// Function to calculate area based on the shape
-fn calculate_area(shape: Shape) -> f64 {
-    // calculate area based of the shape
-    return 0
-}
+// // Function to calculate area based on the shape
+// fn calculate_area(shape: Shape) -> f64 {
+//     // calculate area based of the shape
+//     return 0.00;
+// }
 
-fn main () {
-    // Create instances of different shapes
-    let circle = Shape::Circle(5.0);
-    let rectangle = Shape::Rectangle(3.0, 4.0);
-    let square = Shape::Square(2.0);
-}
+// fn main () {
+//     // Create instances of different shapes
+//     let circle = Shape::Circle(5.0);
+//     let rectangle = Shape::Rectangle(3.0, 4.0);
+//     let square = Shape::Square(2.0);
+// }
+
+// Pattern matching
+// enum Shape {
+//     Circle(f64),
+//     Rectangle(f64, f64),
+//     Square(f64),
+// }
+
+// fn calculate_area(shape: Shape) -> f64 {
+//     let ans = match shape {
+//         Shape::Circle(radius) => 3.14 * radius * radius,
+//         Shape::Rectangle(width, height) => width * height,
+//         Shape::Square(side) => side * side,
+//     };
+//     return ans;
+// }
+// fn main () {
+//     // Create instances of different shapes
+//     let circle = Shape::Circle(5.0);
+//     let rectangle = Shape::Rectangle(3.0, 4.0);
+//     let square = Shape::Square(2.0);
+
+//     let area = calculate_area(circle);
+//     println!("Area of circle: {}", area);
+// }
+
+
+// Error handling
+// use std::fs;
+// enum Return<A, B> {
+//     Ok(A),
+//     Err(B),
+// }
+
+// fn main () {
+//     // there is a fn that can error out/stop the thread
+//     let res = fs::read_to_string("exampl.tsx");
+
+//     match res {
+//         Ok(content) => {
+//             println!("Successfully read the file");
+//         }
+//         Err(err) => {
+//             println!("Error: {}", err);
+//         }
+//     }
+// }
+
+// fn read_from_file_unsafe(file_content: String) -> String {
+//     let res = fs:: read_to_string("example.txt");
+//     return res.unwrap();
+// }
