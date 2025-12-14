@@ -316,3 +316,18 @@
 //     let my_vec: Vec<i32> = vec![1, 2, 3, 4, 5];
 // }
 
+// Hashmaps
+use std::collections::HashMap;
+
+fn main () {
+    let mut users = HashMap::new();
+    users.insert(String::from("priyam"), 22);
+    users.insert(String::from("raman"), 32);
+
+    let first_user_age = users.get("priyam"); // it will return an Option<32>
+
+    match first_user_age {
+        Some(age) => println!("age: {}", age),
+        None => println!("No user found"),
+    }
+}
