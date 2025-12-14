@@ -317,17 +317,37 @@
 // }
 
 // Hashmaps
-use std::collections::HashMap;
+// use std::collections::HashMap;
 
-fn main () {
-    let mut users = HashMap::new();
-    users.insert(String::from("priyam"), 22);
-    users.insert(String::from("raman"), 32);
+// fn main () {
+//     let mut users = HashMap::new();
+//     users.insert(String::from("priyam"), 22);
+//     users.insert(String::from("raman"), 32);
 
-    let first_user_age = users.get("priyam"); // it will return an Option<32>
+//     let first_user_age = users.get("priyam"); // it will return an Option<32>
 
-    match first_user_age {
-        Some(age) => println!("age: {}", age),
-        None => println!("No user found"),
-    }
-}
+//     match first_user_age {
+//         Some(age) => println!("age: {}", age),
+//         None => println!("No user found"),
+//     }
+// }
+
+// Write a function that takes a vector of tuples (each tuple containing a key and a value) and returns a Hashmap where the keys are the unique keys from the input tuples and the vlaues are vectors of all corresponding values associated with each key.
+// use std::collections::HashMap;
+
+// fn group_values_by_key(vec: Vec<(String, i32)>) -> HashMap<String, i32> {
+//     let mut hm = HashMap::new();
+//     for (key, value) in vec {
+//         hm.insert(key, value);
+//     }
+//     return hm;
+// }
+
+// fn main () {
+//     let input_vec = vec![(String::from("priyam"), 22), (String::from("raman"), 32)];
+//     let hm = group_values_by_key(input_vec);
+
+//     println!("{:?}", hm);
+// }
+
+// Iterators
