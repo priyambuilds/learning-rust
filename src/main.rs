@@ -255,26 +255,64 @@
 // }
 
 // Write a function that takes a vector as an input and return returns a vector with even values
-fn main () {
-    let mut vec = Vec::new();
-    vec.push(1);
-    vec.push(2); 
-    vec.push(3);
-    vec.push(4);
-    vec.push(5);
+// Approach #1
+// fn main () {
+//     let mut vec = Vec::new();
+//     vec.push(1);
+//     vec.push(2); 
+//     vec.push(3);
+//     vec.push(4);
+//     vec.push(5);
 
-    let ans = even_filter(&vec);
+//     let ans = even_filter(&vec);
 
-    println!("{:?}", ans);
-    println!("{:?}", vec);
-}
+//     println!("{:?}", ans);
+//     println!("{:?}", vec);
+// }
 
-fn even_filter (vec: &Vec<i32>) -> Vec<i32> {
-    let mut new_vec = Vec::new();
-    for val in vec {
-        if val % 2 == 0 {
-            new_vec.push(*val);
-        }
-    }
-    return new_vec;
-}
+// fn even_filter (vec: &Vec<i32>) -> Vec<i32> {
+//     let mut new_vec = Vec::new();
+//     for val in vec {
+//         if val % 2 == 0 {
+//             new_vec.push(*val);
+//         }
+//     }
+//     return new_vec;
+// }
+
+// Approach #2
+// fn vec_filter(v: &mut Vec<i32>) {
+//     let mut i = 0;
+//     while i < v.len() {
+//         if v[i] % 2 != 0 {
+//             v.remove(i);
+//         } else {
+//             i += 1;
+//         }
+//     }
+// }
+// fn main () {
+//     let mut vec = Vec::new();
+//     vec.push(1);
+//     vec.push(2); 
+//     vec.push(3);
+//     vec.push(4);
+//     vec.push(5);
+
+//     vec_filter(&mut vec);
+//     println!("Updated vector is {:?}", vec);
+// }
+
+// Initialising using rust macros
+// fn main () {
+//     let numbers = vec![1, 2, 3, 4, 5];
+//     for number in numbers {
+//         println!("{}", number);
+//     }
+// }
+
+// Defining the type of the vector as a generic
+// fn main() {
+//     let my_vec: Vec<i32> = vec![1, 2, 3, 4, 5];
+// }
+
