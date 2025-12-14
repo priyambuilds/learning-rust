@@ -437,3 +437,39 @@
 //     println!("{:?}", v2);
 // }
 
+// Strings vs slices
+// Deleting from a string
+//  fn main () {
+//     let mut name = String::from("priyam");
+//     name.push(" Dey");
+//     println!("{}", name);
+//     name.replace_range(8..name.len(), "");
+//     println!("{}", name);
+//  }
+
+// slices
+// fn main() {
+//     let word = String::from("hello world");
+//     let word2 = &word[0..5];
+
+//     println!("{}", word2);
+// }
+
+// Wirite a function that takes a string as na input and returns the first word from it
+fn main() {
+    let mut word = String::from("hello world");
+    let word2 = find_first_word(&word);
+    println!("{}", word);
+    println!("{}", word2);
+}
+
+fn find_first_word(word: &String) -> &str {
+    let mut index = 0;
+    for (_, i) in word.chars().enumerate() {
+        if i == ' ' {
+            break;
+        }
+        index = index + 1;
+    }
+    return &word[0..index];
+}
