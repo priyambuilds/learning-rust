@@ -392,3 +392,48 @@
 //         println!("{}", val);
 //     }
 // }
+
+// Consuming adapters
+// fn main() {
+//     let v1 = vec![1, 2, 3];
+//     let v1_iter = v1.iter();
+
+//     let total: i32 = v1_iter.sum();
+
+//     assert_eq!(total, 6);
+
+//     let sum2: i32 = v1_iter.sum(); // v1_iter gets consumed and cant be used again
+// }
+
+// Iterator adapters
+// Map
+// fn main () {
+//     let v1 = vec![1, 2, 3];
+//     let v1_iter = v1.iter();
+
+//     let v1_iter2 = v1_iter.map(|x| x + 1);
+
+//     for i in v1_iter2 {
+//         println!("{}", i);
+//     }
+
+//     println!("{:?}", v1);
+// }
+// Filter
+// fn main() {
+//     let v1: Vec<i32> = vec![1, 2, 3, 4, 5];
+//     let v1_iter = v1.iter();
+//     let v1_iter2 = v1_iter.filter(|x| *x % 2 == 0);
+//     for i in v1_iter2 {
+//         println!("{}", i);
+//     }
+// }
+
+// Wrtie the logic to first filter all odd values then double each value and create a new vector
+// fn main() {
+//     let v1: Vec<i32> = vec![1, 2, 3, 4, 5];
+//     let v1_iter = v1.iter().filter(|x| *x % 2 == 1).map(|x| x * 2);
+//     let v2: Vec<i32> = v1_iter.collect();
+//     println!("{:?}", v2);
+// }
+
