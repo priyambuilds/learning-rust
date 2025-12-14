@@ -3,7 +3,7 @@
 //     let x: i32 = 32;
 //     let y: u32 = 1000;
 //     let y: f32 = 1000.001;
-    
+
 //     print!("x: {}", x);
 // }
 
@@ -18,7 +18,7 @@
 //         print!("You are not a male.");
 //     }
 
-//     if is_male && is_above_18 { 
+//     if is_male && is_above_18 {
 //         print!("you are a legal male")
 //     }
 // }
@@ -26,7 +26,7 @@
 // Strings
 // fn main () {
 //     let greeting = String::from("hello world");
-//     println!("{}", greeting);   
+//     println!("{}", greeting);
 
 //     let char1 = greeting.chars().nth(1000);
 
@@ -191,7 +191,6 @@
 //     println!("Area of circle: {}", area);
 // }
 
-
 // Error handling
 // use std::fs;
 // enum Return<A, B> {
@@ -239,7 +238,6 @@
 //     }
 // }
 
-
 // /////////////////////////////////////////////////////////////////////////////////////////
 // advanced
 // ////////////////////////////////////////////////////////////////////////////////////////
@@ -259,7 +257,7 @@
 // fn main () {
 //     let mut vec = Vec::new();
 //     vec.push(1);
-//     vec.push(2); 
+//     vec.push(2);
 //     vec.push(3);
 //     vec.push(4);
 //     vec.push(5);
@@ -294,7 +292,7 @@
 // fn main () {
 //     let mut vec = Vec::new();
 //     vec.push(1);
-//     vec.push(2); 
+//     vec.push(2);
 //     vec.push(3);
 //     vec.push(4);
 //     vec.push(5);
@@ -351,3 +349,46 @@
 // }
 
 // Iterators
+
+// Iterating after creating an Iterator
+// fn main() {
+//     let nums = vec![1, 2, 3, 4, 5];
+//     let iter = nums.iter();
+
+//     for value in iter {
+//         println!("{}", value);
+//     }
+// }
+
+// Mutable iterators
+// fn main() {
+//     let mut nums = vec![1, 2, 3, 4, 5];
+//     let iter = nums.iter_mut();
+
+//     for value in iter {
+//         *value = *value + 1;
+//     }
+//     println!("{:?}", nums);
+// }
+
+// Iteating using .next
+// use std::vec;
+// fn main() {
+//     let nums = vec![1, 2, 3, 4, 5];
+//     let mut iter = nums.iter();
+
+//     while let Some(val) = iter.next() {
+//         println!("{}", val);
+//     }
+// }
+
+// IntoIter
+// use std::vec;
+// fn main() {
+//     let nums = vec![1, 2, 3, 4, 5];
+//     let iter = nums.into_iter();
+
+//     for val in iter {
+//         println!("{}", val);
+//     }
+// }
