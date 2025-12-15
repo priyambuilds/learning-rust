@@ -456,20 +456,60 @@
 // }
 
 // Wirite a function that takes a string as na input and returns the first word from it
-fn main() {
-    let mut word = String::from("hello world");
-    let word2 = find_first_word(&word);
-    println!("{}", word);
-    println!("{}", word2);
-}
+// fn main() {
+//     let mut word = String::from("hello world");
+//     let word2 = find_first_word(&word);
+//     println!("{}", word);
+//     println!("{}", word2);
+// }
 
-fn find_first_word(word: &String) -> &str {
-    let mut index = 0;
-    for (_, i) in word.chars().enumerate() {
-        if i == ' ' {
-            break;
-        }
-        index = index + 1;
-    }
-    return &word[0..index];
-}
+// fn find_first_word(word: &String) -> &str {
+//     let mut index = 0;
+//     for (_, i) in word.chars().enumerate() {
+//         if i == ' ' {
+//             break;
+//         }
+//         index = index + 1;
+//     }
+//     return &word[0..index];
+// }
+
+// fn main () {
+//     let mut word = "hello world"; // the type of word is &str
+// }
+
+// Traits
+// trait Summary {
+//     fn summarise(&self) -> String {
+//         return String::from("Hi there");
+//     }
+// }
+
+// struct User {
+//     name: String,
+//     age: u32,
+// }
+
+// struct Fix;
+// impl Summary for Fix {}
+// impl Summary for User {
+//     fn summarise(&self) -> String {
+//         return format!("The name is {}, and the age is {}", self.name, self.age); // Overwriting the default implementation.
+//     }
+// }
+
+// fn main() {
+//     let user = User {
+//         name: String::from("Priyam"),
+//         age: 21,
+//     };
+//     let f = Fix;
+//     noify(f);
+//     println!("{}", user.summarise());
+// }
+
+// traits as parameters
+
+// fn noify(u: impl Summary) {
+//     println!("{}", u.summarise());
+// }
