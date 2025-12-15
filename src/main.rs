@@ -513,3 +513,71 @@
 // fn noify(u: impl Summary) {
 //     println!("{}", u.summarise());
 // }
+
+// Lifetimes
+// Wirte a fucntion that takes two string as an input and returns the bugger amongst them
+// fn longest(a: String, b:String) -> String {
+//     if a.len() > b.len() {
+//         return a;
+//     } else {
+//         return b;
+//     }
+// }
+
+// fn main () {
+//     let a = String::from("priyam");
+//     let b = String::from("raman");
+//     let c = longest(a, b);
+//     println!("{}", c);
+// }
+
+// What about now?
+// fn longest(a: &str, b: &str) -> &str {
+//     if a.len() > b.len() {
+//         return a;
+//     } else {
+//         return b;
+//     }
+// }
+
+// fn main() {
+//     let ans;
+//     let a = String::from("priyam");
+//     {
+//         let b = String::from("raman");
+//         ans = longest(&a, &b);
+//     }
+//     println!("{}", ans);
+// }
+
+// To fix this we use lifetime generic arguments
+// fn longest<'a>(str1: &'a str, str2: &'a str) -> &'a str {
+//     if str1.len() > str2.len() {
+//         return str1;
+//     } else {
+//         return str2;
+//     }
+// }
+
+// fn main() {
+//     let ans;
+//     let a = String::from("priyam");
+//     {
+//         let b = String::from("raman");
+//         ans = longest(&a, &b);
+//     }
+//     println!("{}", ans);
+// }
+
+// Structs with lifetimes
+struct User<'a> {
+    name: &'a str,
+}
+
+fn main() {
+    let name = String::from("priyam");
+    let user = User {
+        name: &name,
+    };
+    println!("{}", user.name);
+}
