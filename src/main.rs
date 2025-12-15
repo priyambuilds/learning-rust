@@ -570,14 +570,46 @@
 // }
 
 // Structs with lifetimes
-struct User<'a> {
-    name: &'a str,
-}
+// struct User<'a> {
+//     name: &'a str,
+// }
 
-fn main() {
-    let name = String::from("priyam");
-    let user = User {
-        name: &name,
-    };
-    println!("{}", user.name);
-}
+// fn main() {
+//     let name = String::from("priyam");
+//     let user = User {
+//         name: &name,
+//     };
+//     println!("{}", user.name);
+// }
+
+// Multithreading
+// use std::thread;
+
+// fn main() {
+//     let handle = thread::spawn(|| {
+//         for i in 0..5 {
+//             println!("Hello from spawned thread {}", i);
+//         }
+//     });
+
+//     for i in 0..5 {
+//         println!("Hello from main thread {}", i);
+//     }
+//     handle.join();
+// }
+
+// Move closure
+// use std::thread;
+
+// fn main () {
+//     let x = 1;
+//     {
+//         let v = vec![1, 2, 3];
+//         thread::spawn(move || {
+//             println!("v: {:?}", v);
+//         });
+//         print!("{}", x);
+//     }
+// }
+
+// Message passing
