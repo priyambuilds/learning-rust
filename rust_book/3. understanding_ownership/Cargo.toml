@@ -1,5 +1,5 @@
 [package]
-name = "learning-rust"
+name = "3. understanding_ownership"
 version = "0.1.0"
 edition = "2024"
 
